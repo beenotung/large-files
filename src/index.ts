@@ -2,17 +2,19 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as util from 'util';
 
+/* tslint:disable */
 // follow symbolic link
-let stat = util.promisify(fs.stat);
+const stat = util.promisify(fs.stat);
 
 // does not follow symbolic link
-let lstat = util.promisify(fs.lstat);
+const lstat = util.promisify(fs.lstat);
+/* tslint:enable */
 
 export interface File {
   // dirname: string
   // filename: string
-  pathname: string
-  size: number
+  pathname: string;
+  size: number;
 }
 
 export function scan(dirname: string): Promise<File[]> {
@@ -23,10 +25,10 @@ export function scan(dirname: string): Promise<File[]> {
         return;
       }
       let files: File[] = [];
-      Promise.all(ds.map(filename => {
-        let pathname = path.join(dirname, filename);
-        return lstat(pathname)
-          .then(stat => {
+      Promise.all(
+        ds.map(filename => {
+          const pathname = path.join(dirname, filename);
+          return lstat(pathname).then(stat => {
             if (stat.isFile()) {
               files.push({
                 // dirname,
@@ -36,12 +38,11 @@ export function scan(dirname: string): Promise<File[]> {
               });
             }
             if (stat.isDirectory()) {
-              return scan(pathname).then(fs => files = files.concat(fs));
+              return scan(pathname).then(fs => (files = files.concat(fs)));
             }
           });
-      })).then(() => resolve(files));
+        }),
+      ).then(() => resolve(files));
     });
   });
 }
-
-
