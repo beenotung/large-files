@@ -1,13 +1,9 @@
 {
   "name": "large-files",
   "version": "1.0.0",
-  "description": "",
+  "description": "cli tool to find out large files under given directory",
   "keywords": [],
-  "author": {
-    "name": "Beeno Tung",
-    "email": "aabbcc1241@yahoo.com.hk",
-    "url": "https://beeno-tung.surge.sh"
-  },
+  "author": "Beeno Tung <aabbcc1241@yahoo.com.hk> (https://beeno-tung.surge.sh)",
   "license": "BSD-2-Clause",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -28,6 +24,9 @@
       "pre-commit": "npm run format"
     }
   },
+  "bin": {
+    "large-file": "./dist/cli.js"
+  },
   "directories": {
     "test": "test"
   },
@@ -44,5 +43,13 @@
     "tslint": "^5.16.0",
     "tslint-eslint-rules": "^5.4.0",
     "typescript": "^3.4.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beenotung/large-files.git"
+  },
+  "bugs": {
+    "url": "https://github.com/beenotung/large-files/issues"
+  },
+  "homepage": "https://github.com/beenotung/large-files#readme"
 }
