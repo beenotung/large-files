@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { compare } from '@beenotung/tslib/compare';
 import { format_byte } from '@beenotung/tslib/format';
 import { scan } from './index';
