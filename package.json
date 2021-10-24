@@ -1,6 +1,6 @@
 {
   "name": "large-files",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "cli tool to find out large files under given directory",
   "keywords": [
     "cli",
