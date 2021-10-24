@@ -38,7 +38,7 @@
   },
   "homepage": "https://github.com/beenotung/large-files#readme",
   "dependencies": {
-    "@beenotung/tslib": "^14.4.5"
+    "@beenotung/tslib": "^17.8.0"
   },
   "devDependencies": {
     "@types/node": "^8.10.45",
