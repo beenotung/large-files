@@ -2,7 +2,12 @@
   "name": "large-files",
   "version": "1.0.2",
   "description": "cli tool to find out large files under given directory",
-  "keywords": [],
+  "keywords": [
+    "cli",
+    "file system",
+    "scan",
+    "large file"
+  ],
   "author": "Beeno Tung <aabbcc1241@yahoo.com.hk> (https://beeno-tung.surge.sh)",
   "license": "BSD-2-Clause",
   "main": "dist/core.js",
